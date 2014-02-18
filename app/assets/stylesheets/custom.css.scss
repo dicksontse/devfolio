@@ -3,8 +3,9 @@
 /* mixins and variables */
 
 $lightGray: #aaaaaa;
-$teal: #71bad9;
-$darkBlue: #007bb0;
+$bluePurple: #3e478f;
+$lightBluePurple: #4e59b3;
+$darkBluePurple: #30386f;
 
 /* global */
 
@@ -14,14 +15,23 @@ body {
   height: 100%;
 }
 
+/* header */
+
+.df-nav {
+  background-color: $bluePurple;
+  border-color: $darkBluePurple;
+}
+
+/* footer */
+
 footer {
   color: $lightGray;
   padding: 40px 0 30px;
   text-align: right;
   a {
-    color: $teal;
+    color: $lightBluePurple;
     &:hover {
-      color: $darkBlue;
+      color: $darkBluePurple;
       text-decoration: none;
     }
   }
@@ -36,4 +46,19 @@ footer {
 
 .push {
   height: 100px;
+}
+
+/* bootstrap */
+
+.navbar {
+  min-height: 60px;
+}
+
+.navbar-inverse {
+  .navbar-brand {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 5px;
+  }
 }
