@@ -3,9 +3,8 @@
 /* mixins and variables */
 
 $lightGray: #aaaaaa;
-$bluePurple: #3e478f;
-$lightBluePurple: #4e59b3;
-$darkBluePurple: #30386f;
+$blue: #517ac6;
+$lightBlue: #789de1;
 
 /* global */
 
@@ -15,11 +14,19 @@ body {
   height: 100%;
 }
 
+a {
+  color: $blue;
+  &:hover,
+  &:focus {
+    color: $lightBlue;
+  }
+}
+
 /* header */
 
 .df-nav {
-  background-color: $bluePurple;
-  border-color: $darkBluePurple;
+  background-color: $lightBlue;
+  border-color: $lightBlue;
 }
 
 /* footer */
@@ -29,9 +36,9 @@ footer {
   padding: 40px 0 30px;
   text-align: right;
   a {
-    color: $lightBluePurple;
+    color: $blue;
     &:hover {
-      color: $darkBluePurple;
+      color: $lightBlue;
       text-decoration: none;
     }
   }
