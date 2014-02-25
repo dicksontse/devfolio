@@ -3,6 +3,8 @@
 /* mixins and variables */
 
 $lightGray: #aaaaaa;
+$lighterGray: #dcdcdc;
+$gray: #777777;
 $blue: #517ac6;
 $lightBlue: #789de1;
 
@@ -27,6 +29,33 @@ a {
 .df-nav {
   background-color: $lightBlue;
   border-color: $lightBlue;
+}
+
+/* home */
+
+.full-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.location {
+  color: $gray;
+}
+
+.contact-links {
+  border-bottom: 1px solid $lighterGray;
+  border-top: 1px solid $lighterGray;
+  margin: 15px 0;
+  padding: 5px 0;
+  a {
+    display: block;
+    margin: 5px 0;
+  }
+}
+
+.page-nav {
+  margin: 20px 0;
 }
 
 /* footer */
@@ -67,5 +96,33 @@ footer {
     font-size: 24px;
     font-weight: 700;
     margin-top: 5px;
+  }
+}
+
+.nav {
+  li {
+    a {
+      font-size: 16px;
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+}
+
+.nav-pills {
+  li {
+    a {
+      border-radius: 0;
+    }
+  }
+  li.active {
+    a {
+      background-color: $blue;
+      &:hover,
+      &:focus {
+        background-color: $blue;
+      }
+    }
   }
 }
