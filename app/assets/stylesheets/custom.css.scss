@@ -58,6 +58,23 @@ a {
   margin: 20px 0;
 }
 
+.df-section {
+  .section-title {
+    background-color: $blue;
+    color: white;
+    font-size: 20px;
+    margin: 20px 0 10px;
+    padding: 8px 15px;
+  }
+  h4 {
+    font-size: 16px;
+    margin: 10px 15px;
+  }
+  p {
+    margin: 0 15px 5px;
+  }
+}
+
 /* footer */
 
 footer {
