@@ -2,9 +2,11 @@
 
 /* mixins and variables */
 
+$gray: #777777;
 $lightGray: #aaaaaa;
 $lighterGray: #dcdcdc;
-$gray: #777777;
+$innerBackgroundGray: #ececec;
+$backgroundGray: #f7f7f7;
 $blue: #517ac6;
 $lightBlue: #789de1;
 
@@ -61,27 +63,56 @@ a {
 }
 
 .df-section {
-  border: 1px solid $lightBlue;
+  background-color: $backgroundGray;
+  border-left: 3px solid $lightBlue;
   font-size: 16px;
   margin-bottom: 30px;
   padding-bottom: 20px;
   .section-label {
-    color: black;
+    font-size: 18px;
     font-weight: 600;
     margin: 0 15px;
+    span {
+      color: $lightGray;
+    }
   }
   .section-title {
-    margin: 6px 0 20px;
-    span {
-      background-color: $lightBlue;
-      color: white;
-      font-size: 20px;
-      padding: 8px 15px;
-    }
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 15px 10px;
+    padding-top: 10px;
+  }
+  .section-italic {
+    font-style: italic;
   }
   p {
     margin: 0 15px 5px;
   }
+  ul {
+    padding-left: 25px;
+    li {
+      list-style-type: none;
+      &:before {
+        color: $gray;
+        content: "\2022";
+        padding-right: 5px;
+      }
+    }
+  }
+}
+
+.project {
+  background-color: $innerBackgroundGray;
+  margin: 15px;
+  padding: 10px 0;
+}
+
+.label-sep {
+  margin: 0 5px;
+}
+
+.github {
+  font-size: 14px;
 }
 
 /* footer */
