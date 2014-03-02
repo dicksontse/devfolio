@@ -58,8 +58,11 @@ a {
   }
 }
 
-.page-nav {
+#page-nav {
   margin: 20px 0;
+  a {
+    outline: none;
+  }
 }
 
 .df-section {
