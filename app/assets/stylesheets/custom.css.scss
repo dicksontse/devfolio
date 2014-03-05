@@ -70,11 +70,10 @@ a {
   border-left: 3px solid $lightBlue;
   font-size: 16px;
   margin-bottom: 30px;
-  padding-bottom: 20px;
+  padding: 10px 15px 15px;
   .section-label {
     font-size: 18px;
     font-weight: 600;
-    margin: 0 15px;
     span {
       color: $lightGray;
     }
@@ -82,17 +81,16 @@ a {
   .section-title {
     font-size: 24px;
     font-weight: 600;
-    margin: 0 15px 10px;
-    padding-top: 10px;
+    margin: 0 0 10px;
   }
   .section-italic {
     font-style: italic;
   }
   p {
-    margin: 0 15px 5px;
+    margin: 0 0 5px;
   }
   ul {
-    padding-left: 25px;
+    padding-left: 10px;
     li {
       list-style-type: none;
       &:before {
@@ -107,8 +105,8 @@ a {
 .project {
   background-color: $innerBackgroundGray;
   border-right: 3px solid $lighterGray;
-  margin: 15px;
-  padding: 10px 0;
+  margin: 15px 0;
+  padding: 10px 15px;
 }
 
 .label-sep {
