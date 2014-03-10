@@ -1,5 +1,17 @@
+<% provide(:title, 'Sign up') %>
 <h1>Sign up</h1>
 
-<%= form_for(@user) do |f| %>
-  
-<% end %>
+<div class="row">
+  <div class="col-md-6">
+    <%= form_for(@user) do |f| %>
+
+        <%= f.label :username %>
+        <%= f.text_field :username %>
+
+        <%= f.label :email %>
+        <%= f.text_field :email %>
+
+        <%= f.submit %>
+    <% end %>
+  </div>
+</div>
