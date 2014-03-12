@@ -20,11 +20,33 @@ body {
   height: 100%;
 }
 
+h1 {
+  font-size: 32px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
 a {
   color: $blue;
   &:hover,
   &:focus {
     color: $lightBlue;
+  }
+}
+
+label {
+  display: block;
+  font-weight: 400;
+}
+
+input {
+  border: 1px solid $lightGray;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 100%;
+  &:focus {
+    border: 1px solid $lightBlue;
   }
 }
 
