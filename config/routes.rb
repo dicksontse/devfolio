@@ -3,6 +3,8 @@ Devfolio::Application.routes.draw do
 
   get "users/new"
   get "users/show"
+
+  match '/signin', to: 'users#new', via: 'get'
   
   root to: 'static_pages#home'
 
