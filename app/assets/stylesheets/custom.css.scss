@@ -222,5 +222,12 @@ footer {
 }
 
 .btn {
+  background-color: $blue;
   font-weight: 300;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $lightBlue;
+    border-color: $lightBlue;
+  }
 }
