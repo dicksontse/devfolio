@@ -1,7 +1,7 @@
 Devfolio::Application.routes.draw do
   resources :users
 
-  match '/signin', to: 'users#new', via: 'get'
+  match '/signup', to: 'users#new', via: 'get'
   
   root to: 'static_pages#home'
 
