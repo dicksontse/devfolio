@@ -5,6 +5,7 @@
     </div>
     <ul class="nav nav-pills navbar-right">
       <% if signed_in? %>
+        <li><%= link_to "Settings", edit_user_path(current_user) %>
         <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
       <% else %>
         <li><%= link_to "Sign up", signup_path %></li>
