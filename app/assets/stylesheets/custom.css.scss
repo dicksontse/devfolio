@@ -189,6 +189,10 @@ footer {
 
 /* bootstrap */
 
+.alert-notice {
+  @extend .alert-warning;
+}
+
 .affix {
   top: 0;
   width: 165px;
