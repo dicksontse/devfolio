@@ -202,9 +202,13 @@ footer {
   min-height: 60px;
   .navbar-right {
     a {
-      background-color: $backgroundGray;
+      background-color: $blue;
+      color: white;
       margin: 12px 0;
       padding: 4px 12px 5px;
+      &:focus {
+        color: $blue;
+      }
     }
   }
 }
