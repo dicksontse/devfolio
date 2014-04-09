@@ -1,2 +1,29 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<% provide(:title, @user.username) %>
+
+<div class="row">
+  <div class="col-md-3 col-lg-2">
+    <img src="http://dicksontse.com/dtse_profile.png">
+    <div class="full-name">Full Name</div>
+    <div class="location">City, State</div>
+    <div class="contact-links">
+      <a href="#">Email</a>
+      <a href="#" target="_blank">Personal Website</a>
+      <a href="https://github.com/#" target="_blank">github.com/#</a>
+    </div>
+    <nav id="affix-nav">
+      <ul id="page-nav" class="nav nav-pills nav-stacked hidden-xs hidden-sm" data-spy="affix" data-offset-top="420">
+        <li class="active"><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="col-md-9 col-lg-10">
+    <section id="home" class="df-section">
+      <div class="section-title">Welcome!</div>
+    </section>
+  </div>
+</div>
