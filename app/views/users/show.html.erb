@@ -7,10 +7,14 @@
     <div class="location"><%= @user.location %></div>
     <div class="contact-links">
       <a href="mailto:<%= @user.email %>"><%= @user.email %></a>
-      <a href="<%= @user.website %>" target="_blank"><%= @user.website %></a>
-      <a href="https://github.com/<%= @user.github %>" target="_blank">
-        github.com/<%= @user.github %>
-      </a>
+      <% if !@user.website.blank? %>
+        <a href="<%= @user.website %>" target="_blank"><%= @user.website %></a>
+      <% end %>
+      <% if !@user.github.blank? %>
+        <a href="https://github.com/<%= @user.github %>" target="_blank">
+          github.com/<%= @user.github %>
+        </a>
+      <% end %>
     </div>
     <nav id="affix-nav">
       <ul id="page-nav" class="nav nav-pills nav-stacked hidden-xs hidden-sm" data-spy="affix" data-offset-top="420">
