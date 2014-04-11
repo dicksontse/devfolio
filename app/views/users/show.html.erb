@@ -6,9 +6,11 @@
     <div class="full-name"><%= @user.name %></div>
     <div class="location"><%= @user.location %></div>
     <div class="contact-links">
-      <a href="#">Email</a>
-      <a href="#" target="_blank">Personal Website</a>
-      <a href="https://github.com/#" target="_blank">github.com/#</a>
+      <a href="mailto:<%= @user.email %>"><%= @user.email %></a>
+      <a href="<%= @user.website %>" target="_blank"><%= @user.website %></a>
+      <a href="https://github.com/<%= @user.github %>" target="_blank">
+        github.com/<%= @user.github %>
+      </a>
     </div>
     <nav id="affix-nav">
       <ul id="page-nav" class="nav nav-pills nav-stacked hidden-xs hidden-sm" data-spy="affix" data-offset-top="420">
