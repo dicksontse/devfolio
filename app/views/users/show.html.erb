@@ -4,7 +4,9 @@
   <div class="col-md-3 col-lg-2">
     <img src="http://dicksontse.com/dtse_profile.png">
     <div class="full-name"><%= @user.name %></div>
-    <div class="location"><%= @user.location %></div>
+    <% if !@user.location.blank? %>
+      <div class="location"><%= @user.location %></div>
+    <% end %>
     <div class="contact-links">
       <a href="mailto:<%= @user.email %>"><%= @user.email %></a>
       <% if !@user.website.blank? %>
