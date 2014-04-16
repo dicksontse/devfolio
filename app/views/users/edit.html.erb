@@ -1,36 +1,40 @@
 <% provide(:title, 'Update profile') %>
 
 <div class="row">
-  <div class="col-md-4 col-md-offset-4">
+  <div class="col-md-8 col-md-offset-2">
     <h1>Update profile</h1>
     <%= form_for(@user) do |f| %>
-        <%= render 'shared/error_messages' %>
+      <%= render 'shared/error_messages' %>
+      <div class="row">
+        <div class="col-md-6">
+          <%= f.label :username %>
+          <%= f.text_field :username %>
 
-        <%= f.label :username %>
-        <%= f.text_field :username %>
+          <%= f.label :email %>
+          <%= f.text_field :email %>
 
-        <%= f.label :name %>
-        <%= f.text_field :name %>
+          <%= f.label :password %>
+          <%= f.password_field :password %>
 
-        <%= f.label :email %>
-        <%= f.text_field :email %>
+          <%= f.label :password_confirmation, "Confirmation" %>
+          <%= f.password_field :password_confirmation %>
 
-        <%= f.label :location %>
-        <%= f.text_field :location %>
+          <%= f.submit "Save changes", class: "btn btn-lg btn-primary form-submit" %>
+        </div>
+        <div class="col-md-6">
+          <%= f.label :name %>
+          <%= f.text_field :name %>
 
-        <%= f.label :website %>
-        <%= f.text_field :website %>
+          <%= f.label :location %>
+          <%= f.text_field :location %>
 
-        <%= f.label :github %>
-        <%= f.text_field :github %>
+          <%= f.label :website %>
+          <%= f.text_field :website %>
 
-        <%= f.label :password %>
-        <%= f.password_field :password %>
-
-        <%= f.label :password_confirmation, "Confirmation" %>
-        <%= f.password_field :password_confirmation %>
-
-        <%= f.submit "Save changes", class: "btn btn-lg btn-primary form-submit" %>
+          <%= f.label :github %>
+          <%= f.text_field :github %>
+        </div>
+      </div>
     <% end %>
   </div>
 </div>
