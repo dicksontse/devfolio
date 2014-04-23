@@ -60,6 +60,25 @@ input {
 
 /* home */
 
+#users-list {
+  margin-top: 20px;
+  a {
+    background-color: $backgroundGray;
+    border-left: 3px solid $blue;
+    font-size: 18px;
+    margin: 0 20px 20px 0;
+    padding: 10px;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $blue;
+      border-color: $lightBlue;
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
 .full-name {
   font-size: 24px;
   font-weight: 600;
