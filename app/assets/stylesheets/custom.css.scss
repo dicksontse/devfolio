@@ -65,9 +65,10 @@ input {
   a {
     background-color: $backgroundGray;
     border-left: 3px solid $blue;
+    display: block;
     font-size: 18px;
     margin: 0 20px 20px 0;
-    padding: 10px;
+    padding: 10px 20px;
     &:hover,
     &:focus,
     &:active {
