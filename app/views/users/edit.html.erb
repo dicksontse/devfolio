@@ -34,6 +34,27 @@
         </div>
       </div>
       <div class="row">
+        <div class="col-md-12">
+          <%= f.label :welcome_section, "Welcome" %>
+          <%= f.text_area :welcome_section, rows: 5, class: "edit-section" %>
+
+          <%= f.label :about_section, "About" %>
+          <%= f.text_area :about_section, rows: 5, class: "edit-section" %>
+
+          <%= f.label :education_section, "Education" %>
+          <%= f.text_area :education_section, rows: 5, class: "edit-section" %>
+
+          <%= f.label :experience_section, "Experience" %>
+          <%= f.text_area :experience_section, rows: 5, class: "edit-section" %>
+
+          <%= f.label :projects_section, "Projects" %>
+          <%= f.text_area :projects_section, rows: 5, class: "edit-section" %>
+
+          <%= f.label :skills_section, "Skills" %>
+          <%= f.text_area :skills_section, rows: 5, class: "edit-section" %>
+        </div>
+      </div>
+      <div class="row">
         <div class="col-md-6 col-md-offset-3">
           <%= f.submit "Save changes", class: "btn btn-lg btn-primary form-submit" %>
         </div>
