@@ -32,12 +32,11 @@
   <div class="col-md-9 col-lg-10">
     <section id="home" class="df-section">
       <div class="section-title">Welcome!</div>
-      <%= @user.welcome_section %>
+      <%= raw @user.welcome_section %>
     </section>
     <section id="about" class="df-section">
       <div class="section-title">About</div>
-      <p>I have lived in the SF Bay Area my entire life.</p>
-      <p>My current interests include building side projects, road cycling, digital currencies, fishing, and traveling.</p>
+      <%= raw @user.about_section %>
     </section>
     <section id="education" class="df-section">
       <div class="section-title">Education</div>
