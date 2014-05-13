@@ -21,7 +21,9 @@
     <nav id="affix-nav">
       <ul id="page-nav" class="nav nav-pills nav-stacked hidden-xs hidden-sm" data-spy="affix" data-offset-top="420">
         <li class="active"><a href="#welcome">Welcome</a></li>
-        <li><a href="#about">About</a></li>
+        <% if !@user.about_section.blank? %>
+          <li><a href="#about">About</a></li>
+        <%end %>
         <li><a href="#education">Education</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -34,10 +36,12 @@
       <div class="section-title">Welcome!</div>
       <%= raw @user.welcome_section %>
     </section>
-    <section id="about" class="df-section">
-      <div class="section-title">About</div>
-      <%= raw @user.about_section %>
-    </section>
+    <% if !@user.about_section.blank? %>
+      <section id="about" class="df-section">
+        <div class="section-title">About</div>
+        <%= raw @user.about_section %>
+      </section>
+    <% end %>
     <section id="education" class="df-section">
       <div class="section-title">Education</div>
       <%= raw @user.education_section %>
