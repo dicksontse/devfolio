@@ -1,7 +1,7 @@
 CKEDITOR.editorConfig = function( config )
 {
+  config.extraAllowedContent = ["section"];
   config.toolbar = 'Mini';
-
   config.toolbar_Mini =
     [
         ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat'],
