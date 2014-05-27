@@ -24,7 +24,9 @@
     </div>
     <nav id="affix-nav">
       <ul id="page-nav" class="nav nav-pills nav-stacked hidden-xs hidden-sm" data-spy="affix" data-offset-top="420">
-        <li class="active"><a href="#welcome">Welcome</a></li>
+        <% if !@user.welcome_section.blank? %>
+          <li class="active"><a href="#welcome">Welcome</a></li>
+        <% end %>
         <% if !@user.about_section.blank? %>
           <li><a href="#about">About</a></li>
         <% end %>
@@ -44,10 +46,12 @@
     </nav>
   </div>
   <div class="col-md-9 col-lg-10">
-    <section id="welcome" class="df-section">
-      <div class="section-title">Welcome!</div>
-      <%= raw @user.welcome_section %>
-    </section>
+    <% if !@user.welcome_section.blank? %>
+      <section id="welcome" class="df-section">
+        <div class="section-title">Welcome!</div>
+        <%= raw @user.welcome_section %>
+      </section>
+    <% end %>
     <% if !@user.about_section.blank? %>
       <section id="about" class="df-section">
         <div class="section-title">About</div>
