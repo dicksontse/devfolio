@@ -1,6 +1,6 @@
 <div id="users-list">
   <% @users.each do |user| %>
-    <div>
+    <div class="profile-link">
       <% if user.name.blank? %>
         <%= link_to "#{user.username}", user_path(user) %>
       <% else %>
