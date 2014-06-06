@@ -1,11 +1,19 @@
-<div id="users-list">
-  <% @users.each do |user| %>
-    <div class="profile-link">
-      <% if user.name.blank? %>
-        <%= link_to "#{user.username}", user_path(user) %>
-      <% else %>
-        <%= link_to "#{user.name}", user_path(user) %>
+<div class="row">
+  <div class="col-md-6">
+    <div id="users-list">
+      <% @users.each do |user| %>
+        <div class="profile-link">
+          <% if user.name.blank? %>
+            <%= link_to "#{user.username}", user_path(user) %>
+          <% else %>
+            <%= link_to "#{user.name}", user_path(user) %>
+          <% end %>
+        </div>
       <% end %>
     </div>
-  <% end %>
+  </div>
+  <div class="col-md-6">
+    <h2>Personal profiles for developers.</h2>
+    <h3>Join Devfolio to begin creating your free profile.</h3>
+  </div>
 </div>
