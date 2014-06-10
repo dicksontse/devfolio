@@ -1,7 +1,7 @@
 class StaticPagesController < ApplicationController
 
   def home
-    @users = User.take(10)
+    @users = User.take(5)
   end
 
 end
