@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140615052017) do
+ActiveRecord::Schema.define(version: 20140616041714) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20140615052017) do
     t.boolean  "enable_experience_section", default: true
     t.boolean  "enable_projects_section",   default: true
     t.boolean  "enable_skills_section",     default: true
+    t.boolean  "enable_welcome_section",    default: true
   end
 
   add_index "users", ["remember_token"], name: "index_users_on_remember_token", using: :btree
