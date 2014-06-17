@@ -42,7 +42,13 @@ class UsersController < ApplicationController
                                    :about_section, :education_section, 
                                    :experience_section, :projects_section,
                                    :skills_section, :password, 
-                                   :password_confirmation, :gravatar)
+                                   :password_confirmation, :gravatar,
+                                   :enable_welcome_section,
+                                   :enable_about_section, 
+                                   :enable_education_section, 
+                                   :enable_experience_section, 
+                                   :enable_projects_section, 
+                                   :enable_skills_section)
     end
 
     # Before filters

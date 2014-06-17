@@ -39,26 +39,50 @@
       <div class="row">
         <div class="col-md-12">
           <div class="edit-section">
+            <div class="pull-right">
+              <%= f.label :enable_welcome_section, "Enable", class: "checkbox-label" %>
+              <%= f.check_box :enable_welcome_section %>
+            </div>
             <%= f.label :welcome_section, "Welcome" %>
             <%= f.cktext_area :welcome_section %>
           </div>
           <div class="edit-section">
+            <div class="pull-right">
+              <%= f.label :enable_about_section, "Enable", class: "checkbox-label" %>
+              <%= f.check_box :enable_about_section %>
+            </div>
             <%= f.label :about_section, "About" %>
             <%= f.cktext_area :about_section %>
           </div>
           <div class="edit-section">
+            <div class="pull-right">
+              <%= f.label :enable_education_section, "Enable", class: "checkbox-label" %>
+              <%= f.check_box :enable_education_section %>
+            </div>
             <%= f.label :education_section, "Education" %>
             <%= f.cktext_area :education_section %>
           </div>
           <div class="edit-section">
+            <div class="pull-right">
+              <%= f.label :enable_experience_section, "Enable", class: "checkbox-label" %>
+              <%= f.check_box :enable_experience_section %>
+            </div>
             <%= f.label :experience_section, "Experience" %>
             <%= f.cktext_area :experience_section %>
           </div>
           <div class="edit-section">
+            <div class="pull-right">
+              <%= f.label :enable_projects_section, "Enable", class: "checkbox-label" %>
+              <%= f.check_box :enable_projects_section %>
+            </div>
             <%= f.label :projects_section, "Projects" %>
             <%= f.cktext_area :projects_section %>
           </div>
           <div class="edit-section">
+            <div class="pull-right">
+              <%= f.label :enable_skills_section, "Enable", class: "checkbox-label" %>
+              <%= f.check_box :enable_skills_section %>
+            </div>
             <%= f.label :skills_section, "Skills" %>
             <%= f.cktext_area :skills_section %>
           </div>
