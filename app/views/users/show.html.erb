@@ -26,59 +26,59 @@
     </div>
     <nav id="affix-nav">
       <ul id="page-nav" class="nav nav-pills nav-stacked hidden-xs hidden-sm" data-spy="affix" data-offset-top="420">
-        <% if !@user.welcome_section.blank? %>
+        <% if @user.enable_welcome_section %>
           <li class="active"><a href="#welcome">Welcome</a></li>
         <% end %>
-        <% if !@user.about_section.blank? %>
+        <% if @user.enable_about_section %>
           <li><a href="#about">About</a></li>
         <% end %>
-        <% if !@user.education_section.blank? %>
+        <% if @user.enable_education_section %>
           <li><a href="#education">Education</a></li>
         <% end %>
-        <% if !@user.experience_section.blank? %>
+        <% if @user.enable_experience_section %>
           <li><a href="#experience">Experience</a></li>
         <% end %>
-        <% if !@user.projects_section.blank? %>
+        <% if @user.enable_projects_section %>
           <li><a href="#projects">Projects</a></li>
         <% end %>
-        <% if !@user.skills_section.blank? %>
+        <% if @user.enable_skills_section %>
           <li><a href="#skills">Skills</a></li>
         <% end %>
       </ul>
     </nav>
   </div>
   <div class="col-md-9 col-lg-10">
-    <% if !@user.welcome_section.blank? %>
+    <% if @user.enable_welcome_section %>
       <section id="welcome" class="df-section">
         <div class="section-title">Welcome!</div>
         <%= raw @user.welcome_section %>
       </section>
     <% end %>
-    <% if !@user.about_section.blank? %>
+    <% if @user.enable_about_section %>
       <section id="about" class="df-section">
         <div class="section-title">About</div>
         <%= raw @user.about_section %>
       </section>
     <% end %>
-    <% if !@user.education_section.blank? %>
+    <% if @user.enable_education_section %>
       <section id="education" class="df-section">
         <div class="section-title">Education</div>
         <%= raw @user.education_section %>
       </section>
     <% end %>
-    <% if !@user.experience_section.blank? %>
+    <% if @user.enable_experience_section %>
       <section id="experience" class="df-section">
         <div class="section-title">Experience</div>
         <%= raw @user.experience_section %>
       </section>
     <% end %>
-    <% if !@user.projects_section.blank? %>
+    <% if @user.enable_projects_section %>
       <section id="projects" class="df-section">
         <div class="section-title">Projects</div>
         <%= raw @user.projects_section %>
       </section>
     <% end %>
-    <% if !@user.skills_section.blank? %>
+    <% if @user.enable_skills_section %>
       <section id="skills" class="df-section">
         <div class="section-title">Skills</div>
         <%= raw @user.skills_section %>
