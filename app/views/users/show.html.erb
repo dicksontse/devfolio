@@ -26,7 +26,7 @@
     </div>
     <nav id="affix-nav">
       <ul id="page-nav" class="nav nav-pills nav-stacked hidden-xs hidden-sm" data-spy="affix" data-offset-top="420">
-        <% if @user.enable_welcome_section %>
+        <% if @user.enable_welcome_section and !@user.welcome_section.blank? %>
           <li class="active"><a href="#welcome">Welcome</a></li>
         <% end %>
         <% if @user.enable_about_section %>
@@ -48,7 +48,7 @@
     </nav>
   </div>
   <div class="col-md-9 col-lg-10">
-    <% if @user.enable_welcome_section %>
+    <% if @user.enable_welcome_section and !@user.welcome_section.blank? %>
       <section id="welcome" class="df-section">
         <div class="section-title">Welcome!</div>
         <%= raw @user.welcome_section %>
