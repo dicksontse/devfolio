@@ -13,8 +13,12 @@
         </li>
         <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
       <% else %>
-        <li><%= link_to "Sign up", signup_path %></li>
-        <li><%= link_to "Sign in", signin_path %></li>
+        <li class="<%= 'active' if current_page?(signup_path) %>">
+          <%= link_to "Sign up", signup_path %>
+        </li>
+        <li class="<%= 'active' if current_page?(signin_path) %>">
+          <%= link_to "Sign in", signin_path %>
+        </li>
       <% end %>
     </ul>
   </div>
