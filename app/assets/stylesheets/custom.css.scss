@@ -305,6 +305,20 @@ input[type="checkbox"] {
   }
 }
 
+#page-nav {
+  li.active {
+    a {
+      background-color: $blue;
+      color: white;
+      &:hover,
+      &:focus {
+        background-color: $blue;
+        color: white;
+      }
+    }
+  }
+}
+
 .btn-lg {
   border-radius: 0;
 }
