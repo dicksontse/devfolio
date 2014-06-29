@@ -8,6 +8,10 @@ class User < ActiveRecord::Base
   before_save { self.email = email.downcase }
   before_create :create_remember_token
 
+  def to_param
+    "#{id}-#{username}"
+  end
+
   def User.new_remember_token
     SecureRandom.urlsafe_base64
   end
