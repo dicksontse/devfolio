@@ -9,4 +9,5 @@ CKEDITOR.editorConfig = function( config )
         ['Link', 'Unlink'], ['Source'],
         ['Format', 'Font', 'FontSize'], ['TextColor', 'BGColor']
     ];
+  config.height = "250px";
 }

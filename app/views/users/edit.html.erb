@@ -1,96 +1,67 @@
 <% provide(:title, 'Edit profile') %>
 
 <div class="row">
-  <div class="col-md-8 col-md-offset-2">
+  <div class="col-md-10 col-md-offset-1">
     <h1>Edit profile</h1>
     <%= form_for(@user) do |f| %>
       <%= render 'shared/error_messages' %>
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-4">
           <%= f.label :username %>
           <%= f.text_field :username %>
-
-          <%= f.label :email %>
-          <%= f.text_field :email %>
 
           <%= f.label :password %>
           <%= f.password_field :password %>
 
           <%= f.label :password_confirmation, "Confirmation" %>
           <%= f.password_field :password_confirmation %>
-
-          <%= f.label :gravatar, "Display Gravatar", class: "checkbox-label" %>
-          <%= f.check_box :gravatar %>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
           <%= f.label :name %>
           <%= f.text_field :name %>
 
+          <%= f.label :email %>
+          <%= f.text_field :email %>
+
+          <%= f.label :github, "Github" %>
+          <%= f.text_field :github %>
+        </div>
+        <div class="col-md-4">
           <%= f.label :location %>
           <%= f.text_field :location %>
 
           <%= f.label :website %>
           <%= f.text_field :website %>
-
-          <%= f.label :github, "Github Username" %>
-          <%= f.text_field :github %>
+          
+          <%= f.label :gravatar, "Gravatar" %>
+          <%= f.check_box :gravatar %>
         </div>
       </div>
       <div class="row">
         <div class="col-md-12">
           <div class="edit-section">
-            <div class="pull-right">
-              <%= f.label :enable_welcome_section, "Enable", class: "checkbox-label" %>
-              <%= f.check_box :enable_welcome_section %>
-            </div>
-            <%= f.label :welcome_section, "Welcome" %>
-            <%= f.cktext_area :welcome_section %>
-          </div>
-          <div class="edit-section">
-            <div class="pull-right">
-              <%= f.label :enable_about_section, "Enable", class: "checkbox-label" %>
-              <%= f.check_box :enable_about_section %>
-            </div>
-            <%= f.label :about_section, "About" %>
-            <%= f.cktext_area :about_section %>
-          </div>
-          <div class="edit-section">
-            <div class="pull-right">
-              <%= f.label :enable_education_section, "Enable", class: "checkbox-label" %>
-              <%= f.check_box :enable_education_section %>
-            </div>
-            <%= f.label :education_section, "Education" %>
-            <%= f.cktext_area :education_section %>
-          </div>
-          <div class="edit-section">
-            <div class="pull-right">
-              <%= f.label :enable_experience_section, "Enable", class: "checkbox-label" %>
-              <%= f.check_box :enable_experience_section %>
-            </div>
-            <%= f.label :experience_section, "Experience" %>
-            <%= f.cktext_area :experience_section %>
-          </div>
-          <div class="edit-section">
-            <div class="pull-right">
-              <%= f.label :enable_projects_section, "Enable", class: "checkbox-label" %>
-              <%= f.check_box :enable_projects_section %>
-            </div>
-            <%= f.label :projects_section, "Projects" %>
-            <%= f.cktext_area :projects_section %>
-          </div>
-          <div class="edit-section">
-            <div class="pull-right">
-              <%= f.label :enable_skills_section, "Enable", class: "checkbox-label" %>
-              <%= f.check_box :enable_skills_section %>
-            </div>
-            <%= f.label :skills_section, "Skills" %>
-            <%= f.cktext_area :skills_section %>
+            <ul id="edit-tabs" class="nav nav-tabs" role="tablist">
+              <li class="active" data-id="welcome"><a href="#">Welcome</a></li>
+              <li data-id="about"><a href="#">About</a></li>
+              <li data-id="education"><a href="#">Education</a></li>
+              <li data-id="experience"><a href="#">Experience</a></li>
+              <li data-id="projects"><a href="#">Projects</a></li>
+              <li data-id="skills"><a href="#">Skills</a></li>
+            </ul>
+            <%= cktext_area_tag 'edit-ta' %>
+            <%= f.hidden_field :welcome_section %>
+            <%= f.hidden_field :about_section %>
+            <%= f.hidden_field :education_section %>
+            <%= f.hidden_field :experience_section %>
+            <%= f.hidden_field :projects_section %>
+            <%= f.hidden_field :skills_section %>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
-          <%= f.submit "Save changes", class: "btn btn-lg btn-primary form-submit" %>
+          <%= f.submit "Save changes", id: "edit-submit", 
+                        class: "btn btn-lg btn-primary form-submit" %>
         </div>
       </div>
     <% end %>
