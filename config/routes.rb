@@ -1,4 +1,4 @@
-Devfolio::Application.routes.draw do
+DevList::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
 

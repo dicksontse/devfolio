@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Devfolio::Application.load_tasks
+DevList::Application.load_tasks
