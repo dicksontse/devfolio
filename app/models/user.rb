@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   validates :password, length: { minimum: 6 }, allow_blank: true
 
   before_save { self.email = email.downcase }
+  before_save :add_url_protocol
   before_create :create_remember_token
 
   def to_param
@@ -24,5 +25,11 @@ class User < ActiveRecord::Base
 
     def create_remember_token
       self.remember_token = User.hash(User.new_remember_token)
+    end
+
+    def add_url_protocol
+      unless self.website[/^https?:\/\//]
+        self.website = "http://#{self.website}"
+      end
     end
 end
