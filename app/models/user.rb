@@ -28,8 +28,10 @@ class User < ActiveRecord::Base
     end
 
     def add_url_protocol
-      unless self.website[/^https?:\/\//]
-        self.website = "http://#{self.website}"
+      if !self.website.nil?
+        unless self.website[/^https?:\/\//]
+          self.website = "http://#{self.website}"
+        end
       end
     end
 end
