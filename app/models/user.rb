@@ -1,6 +1,10 @@
 class User < ActiveRecord::Base
+  extend FriendlyId
+  friendly_id :username
   validates :username, presence: true, uniqueness: true, length: { maximum: 50 }
+  validates_format_of :username, :with => /\A[a-z0-9]+\z/i
   validates :email, presence: true
+  validates_email_format_of :email, message: 'is not in a valid format'
   has_secure_password
   validates :password, length: { minimum: 6 }, :on => :create
   validates :password, length: { minimum: 6 }, allow_blank: true
@@ -8,10 +12,6 @@ class User < ActiveRecord::Base
   before_save { self.email = email.downcase }
   before_save :add_url_protocol
   before_create :create_remember_token
-
-  def to_param
-    "#{id}-#{username}"
-  end
 
   def User.new_remember_token
     SecureRandom.urlsafe_base64

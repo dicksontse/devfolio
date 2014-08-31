@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   before_action :skip_password_attribute, only: :update
 
   def show
-    @user = User.find(params[:id])
+    @user = User.friendly.find(params[:id])
   end
 
   def new
@@ -61,7 +61,7 @@ class UsersController < ApplicationController
     end
 
     def correct_user
-      @user = User.find(params[:id])
+      @user = User.friendly.find(params[:id])
       redirect_to(root_url) unless current_user?(@user)
     end
 
