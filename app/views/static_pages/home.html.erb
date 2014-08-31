@@ -3,9 +3,11 @@
     <h2>Comprehensive developer profiles.</h2>
   </div>
   <div class="col-md-6">
-    <div class="arrow-box promo pull-right hidden-xs hidden-sm">
-      Build a dev profile, it's simple and free.
-    </div>
+    <% if !signed_in? %>
+      <div class="arrow-box promo pull-right hidden-xs hidden-sm">
+        Build a dev profile, it's simple and free.
+      </div>
+    <% end %>
   </div>
 </div>
 <div class="row">
