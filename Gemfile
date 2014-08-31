@@ -14,6 +14,7 @@ gem 'bcrypt-ruby', '~> 3.1.5'
 gem 'ckeditor'
 gem 'validates_email_format_of'
 gem 'friendly_id', '~> 5.0.0'
+gem 'newrelic_rpm'
 
 group :development do
   gem 'better_errors'
