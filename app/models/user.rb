@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   extend FriendlyId
   friendly_id :username
+  before_validation { self.username = username.downcase }
   validates :username, presence: true, uniqueness: true, length: { maximum: 50 }
   validates_format_of :username, :with => /\A[a-z0-9]+\z/i
   validates :email, presence: true
