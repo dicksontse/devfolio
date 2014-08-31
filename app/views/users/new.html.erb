@@ -20,5 +20,12 @@
 
         <%= f.submit "Create account", class: "btn btn-lg btn-primary form-submit" %>
     <% end %>
+
+    <div id="join-msg">
+        By clicking "Create account", you agree to our 
+        <%= link_to "Terms of Service", terms_path, target: "_blank" %>
+        and 
+        <%= link_to "Privacy Policy", privacy_path, target: "_blank" %>.
+    </div>
   </div>
 </div>
