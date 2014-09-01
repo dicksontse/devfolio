@@ -5,8 +5,8 @@
     </div>
     <ul class="nav nav-pills navbar-right">
       <% if signed_in? %>
-        <li class="<%= 'active' if current_page?(user_path(current_user.username)) %>">
-          <%= link_to current_user.username, user_path(current_user.username) %>
+        <li class="<%= 'active' if current_page?(root_url + current_user.username) %>">
+          <%= link_to current_user.username, root_url + current_user.username %>
         </li>
         <li class="<%= 'active' if current_page?(edit_user_path(current_user.username)) %>">
           <%= link_to "Edit profile", edit_user_path(current_user.username) %>
